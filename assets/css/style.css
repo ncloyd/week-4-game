@@ -1,0 +1,40 @@
+h1{
+	padding:20px;
+	width: 260px;
+	border: 2px solid orange;
+	background-color: purple;
+	color: white;
+}
+
+.rules{
+	width: 540px;
+	border: 1px solid green;
+}
+
+.crystals{
+	display: flex;
+}
+
+.crystal{
+	height: 100px;
+	width: 100px;
+	border: 1px solid green;
+}
+
+
+#orange1 {
+	height: 100px;
+	width: 100px;
+}
+#purple1 {
+	height: 100px;
+	width: 100px;
+}
+#red1 {
+	height: 100px;
+	width: 100px;
+}
+#green1 {
+	height: 100px;
+	width: 100px;
+}
