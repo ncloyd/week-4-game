@@ -5,7 +5,7 @@ $(document).ready(function() {
     var lose = [];
     var win = [];
     var previous = 0;
-    var crystalImages = ["assets/images/orange.png", "assets/images/green.png", "assets/images/red.png", "assets/images/purple.png", ];
+    var crystalImages = ["assets/images/orange.png", "assets/images/green.png", "assets/images/red.png", "assets/images/purple.png"];
 
     // $(".randomnumber").on("click", function() {
 
@@ -24,11 +24,12 @@ $(document).ready(function() {
 
     var resetandStart = function() {
 
-        // $(".crystalContainer").empty();
+        $(".crystalContainer").empty();
 
         randomnumber = Math.floor(Math.random() * 101) + 19;
 
         $(".randomnumber").html("Random result: " + randomnumber);
+
 
 
         for (var i = 0; i < 4; i++) {
@@ -43,24 +44,25 @@ $(document).ready(function() {
             });
 
             crystal.html(random);
-
+            $(".crystalContainer").append(crystal);
         }
-        //crystal.append("<img>");
-        //  var crystalImg = $("<img>");
-        //  // $(crystalImg).attr("src",  crystalImages[i]);
-        // $(".crystal img").attr("src", crystalImages[i]);
-        //  // console.log(crystalImages[i]);
+}
 
-        $(".crystalContainer").append(crystal);
+
+        // crystal.append("<img>");
+        // var crystalImg = $("<img>");
+        // // $(crystalImg).attr("src",  crystalImages[i]);
+        // $(".crystal img").attr("src", crystalImages[i]);
+        // // console.log(crystalImages[i]);
+
+
         // $(".crystal").append(crystalImg);
 
-    }
+    
 
     resetandStart();
 
     var reset = function() {
-
-
     }
 
     //event delegation is important
@@ -84,14 +86,12 @@ $(document).ready(function() {
             previous = 0;
             resetandStart();
         }
-
+        
         $(".score").html("Your total score is: " + previous);
         console.log(previous);
     });
 
 });
-
-
 // var img = new Image();
 // var div = document.getElementById('crystals');
 
