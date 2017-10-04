@@ -7,8 +7,6 @@ $(document).ready(function() {
     var previous = 0;
     var crystalImages = ["assets/images/orange.png", "assets/images/green.png", "assets/images/red.png", "assets/images/purple.png"];
 
-    // $(".randomnumber").on("click", function() {
-
     // on page load need:
     // number between 19-120 chosen as the random number
     // new random number generated every time user wins or loses    
@@ -31,46 +29,44 @@ $(document).ready(function() {
         $(".randomnumber").html("Random result: " + randomnumber);
 
 
-
-        for (var i = 0; i < 4; i++) {
+        for (var i = 0; i < crystalImages.length; i++) {
 
             var random = Math.floor(Math.random() * 11) + 1;
 
-
             var crystal = $("<div>");
-            crystal.attr({
-                "class": 'crystal',
-                "data-random": random
-            });
+                crystal.attr({
+                     "class": 'crystal',
+                     "data-random": random
+                 });
+                crystal.css({
+                    "background-image": "url('" + (crystalImages[i]) + "')",
+                });
+
 
             crystal.html(random);
             $(".crystalContainer").append(crystal);
+            
+            // var crystalImg = $("<img>");
+            // $(".crystal img").attr("src", crystalImages[i]);
+            // $(".crystal").append(crystalImg);
         }
+                $(".score").html("Your total score is: " + previous);
 }
-
-
-        // crystal.append("<img>");
-        // var crystalImg = $("<img>");
-        // // $(crystalImg).attr("src",  crystalImages[i]);
-        // $(".crystal img").attr("src", crystalImages[i]);
-        // // console.log(crystalImages[i]);
-
-
-        // $(".crystal").append(crystalImg);
-
     
 
     resetandStart();
-
-    var reset = function() {
-    }
 
     //event delegation is important
 
     $(document).on('click', ".crystal", function() {
 
         var num = parseInt($(this).attr('data-random'));
+       
         previous += num;
+        
+         $(".score").html("Your total score is: " + previous);
+
+        console.log(previous);
 
         if (previous === randomnumber) {
             win++;
@@ -86,9 +82,9 @@ $(document).ready(function() {
             previous = 0;
             resetandStart();
         }
-        
-        $(".score").html("Your total score is: " + previous);
-        console.log(previous);
+
+
+     
     });
 
 });
