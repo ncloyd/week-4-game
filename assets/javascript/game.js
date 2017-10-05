@@ -5,7 +5,7 @@ $(document).ready(function() {
     var lose = [];
     var win = [];
     var previous = 0;
-    var crystalImages = ["assets/images/orange.png", "assets/images/green.png", "assets/images/red.png", "assets/images/purple.png"];
+    var crystalImages = ["assets/images/orange.png", "assets/images/green.png", "assets/images/red2.png", "assets/images/purple.png"];
 
     // on page load need:
     // number between 19-120 chosen as the random number
@@ -26,7 +26,7 @@ $(document).ready(function() {
 
         randomnumber = Math.floor(Math.random() * 101) + 19;
 
-        $(".randomnumber").html("Random result: " + randomnumber);
+        $(".randomnumber").html("Random Number: " + randomnumber);
 
 
         for (var i = 0; i < crystalImages.length; i++) {
@@ -43,7 +43,7 @@ $(document).ready(function() {
                 });
 
 
-            crystal.html(random);
+            // crystal.html(random);
             $(".crystalContainer").append(crystal);
             
             // var crystalImg = $("<img>");

@@ -1,37 +1,99 @@
+body{background-image: url("../assets/images/old_moon.png");
+}
+
+.container{
+    margin: auto;
+	width: 620px;
+	height: 700px;
+	align-content: center;
+	padding-right: 0px;
+}
+
 h1{
-	padding:20px;
-	width: 260px;
+	font-family: 'Kumar One Outline', cursive;
+	padding-top: 25px;
+	padding-bottom: 15px;
+	width: 600px;
 	border: 2px solid orange;
 	background-color: purple;
 	color: white;
+	text-align: center;
+	}
+
+h2{
+	font-family: 'Kumar One Outline', cursive;
+
 }
 
 .rules{
-	width: 540px;
-	border: 1px solid green;
+	font-family: 'Cutive Mono', monospace;
+	font-size: 14px;
+	width: 600px;
+	height: 310px;
+	border: 2px solid red;
+	padding: 10px;
+	margin-top: 20px;
 }
 
 .crystalContainer{
-	display: flex;
-}
+		margin: 0 auto;
+		display: inline-flex;
+	}
 
 .crystal{
-	height: 100px;
-	width: 100px;
-	border: 1px solid green;
+	height: 140px;
+	width: 140px;
+	border: 2px solid purple;
+	margin: 0px 14px 20px 0px;
+	background-color: white;
 }
 
+.row{
+	margin: 0 auto;
+	}
 
-#orange1 {
+.randomnumber{
+	font-family: 'Cutive Mono', monospace;
+	display: block;
+	float: left;
+	margin: 0 20px 0 0;
+	border: 2px solid blue;
 	height: 100px;
-	width: 100px;
+	width: 290px;
+	padding: 10px;
+	}
+
+
+
+.winlose{
+	font-family: 'Cutive Mono', monospace;
+	display: inline-block;
+	float: right;
+	border: 2px solid orange;
+	height: 100px;
+	width: 290px;
+	padding: 10px;
 }
 
-#red1 {
-	height: 100px;
-	width: 100px;
+#win{
+	
+
+	font-family: 'Cutive Mono', monospace;
+	display: inline-block;
 }
-#green1 {
+
+#lose{
+	font-family: 'Cutive Mono', monospace;
+	display: block;
+
+}
+
+.score{
+	font-family: 'Cutive Mono', monospace;
+	display: inline-flex;
+	float: center;
+	border: 2px solid #76D7C4;
 	height: 100px;
-	width: 100px;
+	width: 600px;
+	padding: 10px;
 }
